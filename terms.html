@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syarat & Ketentuan - DICKA PRATAMA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1877f2;
+            --secondary-color: #42b883;
+            --accent-color: #ff6b6b;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-color) !important;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .terms-container {
+            max-width: 1000px;
+            margin: 100px auto 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+        
+        .subsection-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff9a56 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .service-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .list-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .list-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        
+        .meta-badge {
+            display: inline-block;
+            background: #1877f2;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 3px;
+            font-weight: bold;
+        }
+        
+        .construction-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff9a56, #ff6b6b);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 3px;
+            font-weight: bold;
+        }
+        
+        .terms-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .terms-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .terms-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .terms-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
+            .terms-container {
+                margin: 80px 20px 30px;
+                padding: 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">DICKA PRATAMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#meta-ads">Meta Ads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Terms & Conditions Content -->
+    <div class="terms-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+        
+        <h1 class="page-title">Syarat & Ketentuan</h1>
+        
+        <div class="warning-box">
+            <h3><i class="fas fa-exclamation-triangle"></i> Penting: Baca dengan Teliti</h3>
+            <p>Syarat dan ketentuan ini mengatur penggunaan layanan DICKA PRATAMA. Dengan menggunakan layanan kami, Anda menyetujui semua syarat dan ketentuan yang tercantum di bawah ini.</p>
+        </div>
+
+        <div class="content-text">
+            <strong>Tanggal Berlaku:</strong> 1 Januari 2023<br>
+            <strong>Terakhir Diperbarui:</strong> 1 Januari 2023
+        </div>
+
+        <h2 class="section-title">1. Definisi</h2>
+        
+        <div class="list-item"><strong>"DICKA PRATAMA"</strong> - Penyedia layanan Meta Ads dan konsultasi pemasaran digital</div>
+        <div class="list-item"><strong>"Klien"</strong> - Perorangan atau perusahaan yang menggunakan layanan kami</div>
+        <div class="list-item"><strong>"Layanan"</strong> - Layanan Meta Ads dan konsultasi pemasaran digital yang kami sediakan</div>
+        <div class="list-item"><strong>"Meta Ads"</strong> - Layanan periklanan di platform Facebook dan Instagram</div>
+        <div class="list-item"><strong>"Kampanye"</strong> - Satu atau beberapa iklan yang dibuat untuk tujuan pemasaran</div>
+        <div class="list-item"><strong>"Konstruksi"</strong> - Industri konstruksi gedung hunian yang menjadi fokus layanan kami</div>
+
+        <h2 class="section-title">2. Lingkup Layanan</h2>
+        
+        <div class="service-box">
+            <h4><i class="fas fa-bullhorn"></i> Layanan Meta Ads untuk Konstruksi</h4>
+            <p>DICKA PRATAMA menyediakan layanan berikut:</p>
+            <div class="mt-2">
+                <span class="meta-badge">Facebook Ads</span>
+                <span class="meta-badge">Instagram Ads</span>
+                <span class="construction-badge">Konstruksi</span>
+                <span class="construction-badge">Gedung Hunian</span>
+            </div>
+        </div>
+
+        <h3 class="subsection-title">2.1 Layanan Utama</h3>
+        <div class="list-item">Pembuatan dan pengelolaan kampanye Meta Ads</div>
+        <div class="list-item">Targeting audiens untuk industri konstruksi</div>
+        <div class="list-item">Optimasi performa iklan</div>
+        <div class="list-item">Analisis dan pelaporan hasil</div>
+        <div class="list-item">Konsultasi strategi pemasaran</div>
+
+        <h3 class="subsection-title">2.2 Layanan Tambahan</h3>
+        <div class="list-item">Pembuatan konten visual untuk proyek konstruksi</div>
+        <div class="list-item">Manajemen halaman Facebook dan Instagram</div>
+        <div class="list-item">A/B testing untuk iklan</div>
+        <div class="list-item">Retargeting campaign</div>
+
+        <h2 class="section-title">3. Kewajiban Klien</h2>
+        
+        <div class="info-box">
+            <h4><i class="fas fa-user-check"></i> Tanggung Jawab Klien</h4>
+            <p>Sebagai klien, Anda setuju untuk:</p>
+        </div>
+
+        <div class="list-item">Memberikan informasi yang akurat dan lengkap</div>
+        <div class="list-item">Memastikan semua materi iklan mematuhi hukum yang berlaku</div>
+        <div class="list-item">Menyediakan akses yang diperlukan ke akun Meta Business</div>
+        <div class="list-item">Melakukan pembayaran tepat waktu sesuai invoice</div>
+        <div class="list-item">Memberikan feedback konstruktif untuk optimasi</div>
+        <div class="list-item">Mematuhi kebijakan iklan Meta</div>
+
+        <h2 class="section-title">4. Kewajiban DICKA PRATAMA</h2>
+        
+        <h3 class="subsection-title">4.1 Komitmen Layanan</h3>
+        <p class="content-text">
+            DICKA PRATAMA berkomitmen untuk:
+        </p>
+        <div class="list-item">Menyediakan layanan Meta Ads yang profesional</div>
+        <div class="list-item">Mengoptimalkan kampanye untuk hasil terbaik</div>
+        <div class="list-item">Memberikan laporan performa yang transparan</div>
+        <div class="list-item">Menjaga kerahasiaan informasi klien</div>
+        <div class="list-item">Memberikan konsultasi ahli untuk industri konstruksi</div>
+
+        <h3 class="subsection-title">4.2 Standar Kualitas</h3>
+        <p class="content-text">
+            Kami menjamin:
+        </p>
+        <div class="list-item">Kampanye dibuat sesuai best practice Meta Ads</div>
+        <div class="list-item">Targeting audiens yang relevan untuk konstruksi</div>
+        <div class="list-item">Monitoring performa harian</div>
+        <div class="list-item">Optimasi berkelanjutan</div>
+
+        <h2 class="section-title">5. Pembayaran</h2>
+        
+        <table class="terms-table">
+            <thead>
+                <tr>
+                    <th>Jenis Layanan</th>
+                    <th>Struktur Pembayaran</th>
+                    <th>Ketentuan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Setup Campaign</td>
+                    <td>50% di muka, 50% setelah setup</td>
+                    <td>Non-refundable setelah dimulai</td>
+                </tr>
+                <tr>
+                    <td>Monthly Management</td>
+                    <td>Di muka setiap bulan</td>
+                    <td>Tagihan dibayar sebelum tanggal 5</td>
+                </tr>
+                <tr>
+                    <td>Ad Spend Budget</td>
+                    <td>Terpisah dari fee jasa</td>
+                    <td>100% untuk iklan Meta</td>
+                </tr>
+                <tr>
+                    <td>Konsultasi</td>
+                    <td>Per sesi atau paket</td>
+                    <td>Pembayaran sebelum sesi</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="subsection-title">5.1 Metode Pembayaran</h3>
+        <div class="list-item">Transfer Bank (BCA, Mandiri, BNI)</div>
+        <div class="list-item">E-Wallet (GoPay, OVO, DANA)</div>
+        <div class="list-item">Kartu Kredit (melalui payment gateway)</div>
+        <div class="list-item">Tunai (untuk konsultasi tatap muka)</div>
+
+        <h3 class="subsection-title">5.2 Keterlambatan Pembayaran</h3>
+        <p class="content-text">
+            Pembayaran terlambat akan dikenakan:
+        </p>
+        <div class="list-item">Denda 2% per minggu dari total tagihan</div>
+        <div class="list-item">Penangguhan layanan setelah 14 hari</div>
+        <div class="list-item">Penghentian kampanye setelah 30 hari</div>
+
+        <h2 class="section-title">6. Kebijakan Pembatalan</h2>
+        
+        <h3 class="subsection-title">6.1 Pembatalan oleh Klien</h3>
+        <div class="list-item"><strong>30 hari sebelum:</strong> Pengembalian 50% dari pembayaran</div>
+        <div class="list-item"><strong>14 hari sebelum:</strong> Pengembalian 25% dari pembayaran</div>
+        <div class="list-item"><strong>Kurang dari 14 hari:</strong> Tidak ada pengembalian</div>
+
+        <h3 class="subsection-title">6.2 Pembatalan oleh DICKA PRATAMA</h3>
+        <p class="content-text">
+            Kami berhak membatalkan layanan jika:
+        </p>
+        <div class="list-item">Klien melanggar kebijakan Meta Ads</div>
+        <div class="list-item">Pembayaran terlambat lebih dari 30 hari</div>
+        <div class="list-item">Adanya aktivitas ilegal atau penipuan</div>
+        <div class="list-item">Kerjasama tidak kondusif</div>
+
+        <h2 class="section-title">7. Kekayaan Intelektual</h2>
+        
+        <h3 class="subsection-title">7.1 Hak Kekayaan Intelektual</h3>
+        <p class="content-text">
+            Ketentuan hak kekayaan intelektual:
+        </p>
+        <div class="list-item">DICKA PRATAMA memiliki hak atas strategi dan metodologi</div>
+        <div class="list-item">Klien memiliki hak atas konten yang disediakan</div>
+        <div class="list-item">Meta memiliki hak atas platform dan algoritma</div>
+        <div class="list-item">Hasil kampanye menjadi milik klien</div>
+
+        <h3 class="subsection-title">7.2 Penggunaan Konten</h3>
+        <p class="content-text">
+            DICKA PRATAMA berhak:
+        </p>
+        <div class="list-item">Menggunakan hasil kampanye sebagai portfolio</div>
+        <div class="list-item">Membuat case study (dengan persetujuan klien)</div>
+        <div class="list-item">Menampilkan logo klien di website</div>
+
+        <h2 class="section-title">8. Jaminan dan Disclaimer</h2>
+        
+        <div class="warning-box">
+            <h4><i class="fas fa-info-circle"></i> Penting: Hasil Tidak Dijamin</h4>
+            <p>Kami tidak menjamin hasil spesifik dari kampanye Meta Ads karena faktor eksternal yang memengaruhi performa iklan.</p>
+        </div>
+
+        <h3 class="subsection-title">8.1 Yang Tidak Dijamin</h3>
+        <div class="list-item">Jumlah leads atau konversi spesifik</div>
+        <div class="list-item">Peringkat iklan di platform Meta</div>
+        <div class="list-item">Cost per acquisition (CPA) tertentu</div>
+        <div class="list-item">Waktu persetujuan iklan oleh Meta</div>
+
+        <h3 class="subsection-title">8.2 Yang Dijamin</h3>
+        <div class="list-item">Profesionalisme dalam pengelolaan kampanye</div>
+        <div class="list-item">Transparansi dalam pelaporan</div>
+        <div class="list-item">Optimasi berkelanjutan</div>
+        <div class="list-item">Konsultasi ahli untuk industri konstruksi</div>
+
+        <h2 class="section-title">9. Kerahasiaan</h2>
+        
+        <p class="content-text">
+            DICKA PRATAMA berkomitmen untuk menjaga kerahasiaan:
+        </p>
+        <div class="list-item">Informasi keuangan klien</div>
+        <div class="list-item">Strategi bisnis internal</div>
+        <div class="list-item">Data pelanggan klien</div>
+        <div class="list-item">Informasi proyek konstruksi</div>
+
+        <h2 class="section-title">10. Force Majeure</h2>
+        
+        <p class="content-text">
+            DICKA PRATAMA tidak bertanggung jawab atas keterlambatan atau kegagalan dalam melaksanakan kewajiban jika disebabkan oleh:
+        </p>
+        <div class="list-item">Bencana alam</div>
+        <div class="list-item">Perubahan kebijakan Meta</div>
+        <div class="list-item">Gangguan teknis di luar kendali kami</div>
+        <div class="list-item">Kondisi ekonomi yang memengaruhi industri</div>
+
+        <h2 class="section-title">11. Penyelesaian Sengketa</h2>
+        
+        <h3 class="subsection-title">11.1 Prosedur</h3>
+        <p class="content-text">
+            Sengketa akan diselesaikan melalui:
+        </p>
+        <div class="list-item">Negosiasi damai terlebih dahulu</div>
+        <div class="list-item">Mediasi jika negosiasi gagal</div>
+        <div class="list-item">Pengadilan di Bandar Lampung sebagai upaya terakhir</div>
+
+        <h3 class="subsection-title">11.2 Yurisdiksi</h3>
+        <p class="content-text">
+            Syarat dan ketentuan ini diatur oleh hukum Republik Indonesia. Setiap sengketa akan diselesaikan di pengadilan yang berwenang di Kota Bandar Lampung.
+        </p>
+
+        <h2 class="section-title">12. Perubahan Syarat & Ketentuan</h2>
+        
+        <p class="content-text">
+            DICKA PRATAMA berhak mengubah syarat dan ketentuan ini kapan saja. Perubahan akan:
+        </p>
+        <div class="list-item">Diberitahukan melalui email atau website</div>
+        <div class="list-item">Berlaku 30 hari setelah pemberitahuan</div>
+        <div class="list-item">Mengikat semua klien aktif</div>
+
+        <h2 class="section-title">13. Kontak & Informasi</h2>
+        
+        <div class="info-box">
+            <h4><i class="fas fa-building"></i> DICKA PRATAMA</h4>
+            <p><strong>Alamat:</strong><br>
+            JL SUKARNO HATTA PERUMAHAN K SEPANG<br>
+            Desa/Kelurahan Labuhan Ratu<br>
+            Kec. Labuhan Ratu, Kota Bandar Lampung<br>
+            Provinsi Lampung</p>
+            
+            <p><strong>Email:</strong> info@dickapratama.com</p>
+            <p><strong>Telepon:</strong> 085285703497</p>
+            <p><strong>Website:</strong> www.dickapratama.com</p>
+        </div>
+
+        <div class="service-box">
+            <h4><i class="fas fa-certificate"></i> Sertifikasi & Keanggotaan</h4>
+            <p>DICKA PRATAMA adalah:</p>
+            <div class="list-item">Meta Business Partner</div>
+            <div class="list-item">Google Ads Certified</div>
+            <div class="list-item">Anggota Asosiasi Digital Marketing Indonesia</div>
+        </div>
+
+        <div class="warning-box">
+            <h4><i class="fas fa-check-circle"></i> Persetujuan Syarat & Ketentuan</h4>
+            <p>Dengan menggunakan layanan DICKA PRATAMA, Anda menyatakan telah membaca, memahami, dan menyetujui semua syarat dan ketentuan yang tercantum dalam dokumen ini.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#services">Layanan</a>
+                <a href="index.html#about">Tentang</a>
+                <a href="index.html#meta-ads">Meta Ads</a>
+                <a href="index.html#contact">Kontak</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+            <p>&copy; 2023 DICKA PRATAMA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

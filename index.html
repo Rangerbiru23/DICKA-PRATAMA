@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICKA PRATAMA - Meta Ads Specialist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1877f2;
+            --secondary-color: #42b883;
+            --accent-color: #ff6b6b;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://ik.imagekit.io/xcl991/BG-Creative-1');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .company-name {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary-color);
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px var(--secondary-color), 0 0 40px var(--secondary-color);
+            }
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #f8f9fa;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-color) !important;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .meta-ads-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .meta-ads-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://ik.imagekit.io/xcl991/BG-Creative-2');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--dark-color);
+            margin-top: 10px;
+        }
+        
+        .contact-section {
+            background: var(--dark-color);
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            text-align: center;
+            margin: 15px;
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+        
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .construction-highlight {
+            background: linear-gradient(45deg, #ff9a56, #ff6b6b);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .meta-badge {
+            display: inline-block;
+            background: #1877f2;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">DICKA PRATAMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#meta-ads">Meta Ads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="floating-element" style="top: 20%; left: 10%; font-size: 4rem;">
+            <i class="fas fa-building"></i>
+        </div>
+        <div class="floating-element" style="top: 60%; right: 15%; font-size: 3rem;">
+            <i class="fas fa-ad"></i>
+        </div>
+        <div class="floating-element" style="bottom: 20%; left: 20%; font-size: 3.5rem;">
+            <i class="fas fa-bullhorn"></i>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="company-name">DICKA PRATAMA</h1>
+            <p class="tagline">Spesialis Meta Ads untuk Industri Konstruksi Gedung Hunian</p>
+            <div class="construction-highlight">
+                <i class="fas fa-home"></i> Solusi Pemasaran Digital untuk Konstruksi Gedung Hunian <i class="fas fa-home"></i>
+            </div>
+            <a href="#services" class="cta-button">Jelajahi Layanan Kami</a>
+            <a href="#contact" class="cta-button">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Meta Ads Campaign</h3>
+                        <p>Kampanye iklan yang efektif di Facebook dan Instagram untuk menjangkau calon klien potensial untuk proyek konstruksi Anda.</p>
+                        <div class="mt-3">
+                            <span class="meta-badge">Facebook Ads</span>
+                            <span class="meta-badge">Instagram Ads</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Target Audience</h3>
+                        <p>Penentuan target audiens yang tepat untuk memastikan iklan konstruksi Anda sampai kepada orang yang tepat.</p>
+                        <div class="mt-3">
+                            <span class="meta-badge">Custom Audience</span>
+                            <span class="meta-badge">Lookalike</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics & Reporting</h3>
+                        <p>Analisis mendalam dan laporan komprehensif tentang performa iklan untuk optimasi berkelanjutan.</p>
+                        <div class="mt-3">
+                            <span class="meta-badge">ROI Tracking</span>
+                            <span class="meta-badge">A/B Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Konten Konstruksi</h3>
+                        <p>Pembuatan konten menarik yang menampilkan proyek konstruksi gedung hunian Anda dengan cara yang profesional.</p>
+                        <div class="mt-3">
+                            <span class="meta-badge">Visual Content</span>
+                            <span class="meta-badge">Project Showcase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Optimasi Iklan</h3>
+                        <p>Optimasi berkelanjutan untuk meningkatkan konversi dan mengurangi biaya perolehan klien.</p>
+                        <div class="mt-3">
+                            <span class="meta-badge">CPC Optimization</span>
+                            <span class="meta-badge">Conversion Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Konsultasi Strategi</h3>
+                        <p>Konsultasi strategi pemasaran digital khusus untuk industri konstruksi gedung hunian.</p>
+                        <div class="mt-3">
+                            <span class="meta-badge">Market Analysis</span>
+                            <span class="meta-badge">Growth Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Tentang DICKA PRATAMA</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Spesialis Meta Ads untuk Industri Konstruksi</h3>
+                    <p>DICKA PRATAMA adalah ahli dalam pemasaran digital dengan fokus khusus pada Meta Ads untuk industri konstruksi gedung hunian. Kami memahami tantangan unik dalam memasarkan layanan konstruksi dan memiliki solusi yang terbukti efektif.</p>
+                    <p>Dengan pengalaman bertahun-tahun, kami telah membantu banyak perusahaan konstruksi meningkatkan visibilitas mereka dan mendapatkan klien berkualitas melalui kampanye iklan yang tepat sasaran.</p>
+                    <div class="construction-highlight mt-4">
+                        <i class="fas fa-award"></i> Ahli dalam Pemasaran Konstruksi Digital <i class="fas fa-award"></i>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Klien Puas</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Kampanye Sukses</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Tahun Pengalaman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meta Ads Section -->
+    <section id="meta-ads" class="section meta-ads-section">
+        <div class="container">
+            <h2 class="section-title">Keunggulan Meta Ads untuk Konstruksi</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Mengapa Meta Ads Efektif untuk Industri Konstruksi?</h3>
+                    <p>Meta Ads (Facebook & Instagram Ads) adalah platform yang sangat efektif untuk industri konstruksi karena:</p>
+                    <ul>
+                        <li><strong>Targeting Demografis</strong> - Menjangkau orang yang berencana membangun atau merenovasi rumah</li>
+                        <li><strong>Targeting Geografis</strong> - Fokus pada area layanan konstruksi Anda</li>
+                        <li><strong>Targeting Minat</strong> - Menjangkau orang yang tertarik pada desain interior, arsitektur, dan properti</li>
+                        <li><strong>Visual Content</strong> - Menampilkan proyek konstruksi Anda dengan foto dan video berkualitas tinggi</li>
+                        <li><strong>Retargeting</strong> - Mengingatkan kembali pengunjung website yang belum menghubungi Anda</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Strategi Meta Ads Kami untuk Konstruksi</h3>
+                    <div class="service-card">
+                        <h4><i class="fas fa-bullhorn"></i> Awareness Campaign</h4>
+                        <p>Meningkatkan kesadaran merek konstruksi Anda di kalangan audiens target.</p>
+                    </div>
+                    <div class="service-card mt-3">
+                        <h4><i class="fas fa-user-plus"></i> Lead Generation</h4>
+                        <p>Mengumpulkan informasi kontak dari calon klien yang tertarik dengan layanan konstruksi Anda.</p>
+                    </div>
+                    <div class="service-card mt-3">
+                        <h4><i class="fas fa-eye"></i> Traffic Campaign</h4>
+                        <p>Mengarahkan traffic berkualitas ke website portofolio proyek konstruksi Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title text-white">Hubungi Kami</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Alamat</h3>
+                    <p>JL SUKARNO HATTA PERUMAHAN K SEPANG<br>
+                    Desa/Kelurahan Labuhan Ratu<br>
+                    Kec. Labuhan Ratu, Kota Bandar Lampung<br>
+                    Provinsi Lampung</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Telepon</h3>
+                    <p>085285703497</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>info@dickapratama.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="privacy.html" class="cta-button">Kebijakan Privasi</a>
+                <a href="terms.html" class="cta-button">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#home">Beranda</a>
+                <a href="#services">Layanan</a>
+                <a href="#about">Tentang</a>
+                <a href="#meta-ads">Meta Ads</a>
+                <a href="#contact">Kontak</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2023 DICKA PRATAMA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.innerText.replace('+', '');
+                const count = +counter.innerText.replace('+', '');
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment) + '+';
+                    setTimeout(() => animateCounters(), 10);
+                } else {
+                    counter.innerText = target + '+';
+                }
+            });
+        }
+
+        // Trigger counter animation when stats section is in view
+        const statsSection = document.querySelector('.stats-container');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.unobserve(statsSection);
+            }
+        }, { threshold: 0.5 });
+
+        observer.observe(statsSection);
+    </script>
+</body>
+</html>
