@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "AI-powered development with modern React stack",
   },
   other: {
-    "facebook-domain-verification": "vi6q346yn1f45sgoqcc40mzwhmlood",
+    "facebook-domain-verification": "r5n0krf4kzch0jkbob97p6k21bq0ij",
   },
 };
 
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="facebook-domain-verification" content="vi6q346yn1f45sgoqcc40mzwhmlood" />
+        <meta name="facebook-domain-verification" content="r5n0krf4kzch0jkbob97p6k21bq0ij" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
